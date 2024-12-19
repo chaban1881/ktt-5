@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #87ceeb;
+  border: 2px solid #000;
+  overflow: hidden;
+}
+
+.road {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #8b4513;
+  animation: appear 1s ease-in-out 0s forwards;
+}
+
+.house {
+  position: absolute;
+  bottom: 90px;
+  left: 50px;
+  animation: appear 1s ease-in-out 1s forwards;
+}
+
+.tree {
+  position: absolute;
+  bottom: 85px;
+  right: 50px;
+  animation: appear 1s ease-in-out 2s forwards;
+}
+
+.sun {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  animation: appear 1s ease-in-out 3s forwards;
+}
+
+.car {
+  position: absolute;
+  bottom: 70px;
+  left: -200px;
+  animation: drive 5s linear 4s forwards;
+}
+
+
+@keyframes appear {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes drive {
+  from {
+      left: -150px;
+  }
+  to {
+      left: 100%;
+  }
+}
